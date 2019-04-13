@@ -1,0 +1,148 @@
+/** HEADER **/
+#header-nav {
+  background-color: #71e0ce;
+  border-radius: 0;
+  border: 0;
+  vertical-align: middle;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  color: #af3120;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(12, 3, 138);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  line-height: .75;
+}
+
+#nav-list {
+  margin-top: 10px;
+  /* background: #01abb1; */
+  height: 100%;
+}
+
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+}
+
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -45px;
+}
+/* END HEADER */
+
+/* HOME PAGE */
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 25px;    
+    text-align: center;
+    line-height: unset;
+  }
+ 
+  div {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    border: 1px solid black;
+    background-color: grey;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Helvetica;
+    color: black;
+  }
+  h3 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+  }
+  
+  /* Simple Responsive Framework. */
+  .row {
+    width: 100%;
+    height: 10px;
+    margin: auto;
+    padding-top: 10px;
+  }
+  
+  /* END HOME PAGE */
+
+  /********** Desktop **********/
+  @media (min-width: 992px) {
+    #header-nav {
+      height: 80px;
+    }
+    .container {
+      width: 100%;
+    }
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      float: left;
+      border: 0px solid green;
+    }
+  }
+  
+  /********** Tablet **********/
+  @media (min-width: 768px) and (max-width: 991px) {
+    #header-nav {
+      height: 80px;
+    }
+    .container {
+      width: 100%;
+    }
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+      float: left;
+      border: 0px solid green;
+    }
+    h2 {
+      font-size: 250%;
+    }
+    section {
+        font-size: 125%;
+    }
+  }
+  
+  /********** Mobile **********/
+  @media (max-width: 767px) {
+    .navbar-header {
+      height: 50px;
+    }
+
+    #collapsable-nav a { /* Collapsed nav menu text */
+      font-size: 1.2em;
+    }
+
+    div.container #collapsable-nav {
+      height:unset;
+      margin-bottom: -20px;
+    }
+
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+      float: left;
+      border: 0px solid green;
+    }
+    h2 {
+      font-size: 250%;
+    }
+    section {
+        font-size: 125%;
+    }
+  }
