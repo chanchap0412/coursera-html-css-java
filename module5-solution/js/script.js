@@ -84,14 +84,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  function (jsonResponse) {
-    var special_menu = new Array();
-    for (var i=0; i < jsonResponse.length; i++) {
-      special_menu[i] = "'" + jsonResponse[i].short_name + "'";
-    }
-    // console.log ("special_Menu:" + special_menu);
-    buildAndShowHomeHTML(special_menu);
-  },
+  buildAndShowHomeHTML,
   // [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
@@ -114,7 +107,7 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
       // console.log ("org:" + categories);
-      var chosenCategoryShortName = chooseRandomCategory(categories);
+      var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
       // console.log ("chosen:" + chosenCategoryShortName);
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
@@ -129,7 +122,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      
+      chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
       var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName",chosenCategoryShortName);
       
       // console.log ("home:" + homeHtmlToInsertIntoMainPage);
